@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDJMTRANS - Contact</title>
+    <!-- Tailwindcss -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <nav class="w-full bg-white montserrat-regular">
+
+        <div class="w-10/12 py-6 mx-auto flex flex-wrap justify-between items-center gap-4">
+
+            <!-- Logo -->
+            <a href="home.html" class="flex items-center">
+                <h1 class="text-2xl font-bold text-gray-800">IDJM<span class="font-normal">TRANS</span></h1>
+            </a>
+
+            <!-- Hamburger — mobile only -->
+            <button class="lg:hidden flex items-center text-gray-700 text-2xl" onclick="document.getElementById('nav-links').classList.toggle('hidden')" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Links -->
+            <div id="nav-links" class="hidden lg:flex gap-8 xl:gap-12 text-sm items-center w-full lg:w-auto flex-col lg:flex-row">
+                <a href="home.html" class="text-gray-700 hover:text-blue-500">Home</a>
+                <a href="logistics.html" class="text-gray-700 hover:text-blue-500">Commertial Logistic</a>
+                <a href="demenagement.html" class="text-gray-700 hover:text-blue-500">Demenagement</a>
+                <a href="contact.html" class="hover:text-white hover:bg-indigo-600 text-indigo-700 bg-indigo-100 rounded-xl px-5 py-2 transition">Contact us</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="w-10/12 mx-auto">
+
+        <!-- Contact Info -->
+        <div class="py-16">
+
+            <div class="block sm:flex gap-8 justify-between items-center">
+
+                <div class="mt-6 p-6 sm:w-1/2">
+                    <div>
+                        <h1 class="text-5xl lora-400">Contact Us</h1>
+                        <h2 class="urbanist-400 mt-4 text-lg opacity-75">
+                            <!-- Have a question about your logistics or moving needs? Contact us through the form, via email, or chat with us directly on WhatsApp. -->
+                            Reach out via email, phone, or WhatsApp. We're here to answer your questions and get your move started.
+                        </h2>
+                    </div>
+
+                    <br><br>
+
+                    <div class="flex justify-between flex-wrap pe-12">
+
+                        <!-- Phone -->
+                        <div class="mt-6 sm:mt-12 w-fit rounded-[30px]">
+                            <p class="mb-3 size-12 flex justify-center items-center bg-gradient-to-tl from-indigo-200 to-indigo-50 rounded-2xl"><i class="fa-solid fa-phone text-indigo-400"></i></p>
+                            <p class="text-sm mb-3 text-gray-600">Call us</p>
+                            <a href="#" class="text-xl urbanist-600">+212 6 23 23 23 23</a>
+                        </div>
+
+                        <!-- Whatsapp -->
+                        <div class="mt-12 w-fit rounded-[30px]">
+                            <p class="mb-3 size-12 flex justify-center items-center bg-gradient-to-tl from-lime-200 to-lime-50 rounded-2xl"><i class="fab fa-whatsapp text-lime-400"></i></p>
+                            <p class="text-sm mb-3 text-gray-600">Whatsapp</p>
+                            <a href="#" class="text-xl urbanist-600">+212 6 23 23 23 23</a>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mt-12 w-fit rounded-[30px]">
+                            <p class="mb-3 size-12 flex justify-center items-center bg-gradient-to-tl from-amber-200 to-amber-50 rounded-2xl"><i class="fa-regular fa-envelope text-amber-400"></i></p>
+                            <p class="text-sm mb-3 text-gray-600">Email</p>
+                            <a href="#" class="text-xl urbanist-600">info@idjmtrans.com</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="sm:w-1/2">
+                    <div class="w-full sm:w-10/12 shadow-xl border border-gray-300 bg-gradient-to-tl from-slate-300 to-white rounded-3xl mt-6 sm:mt-0 p-6 sm:p-10 mx-auto">
+
+                        <h3 class="text-3xl text-gray-700 urbanist-600">Get in Touch</h3>
+                        <p class="text-gray-500 mt-1">You can reach us anytime</p>
+
+                        <form action="" class="">
+
+                            <div class="mt-4">
+                                <input type="text" name="full-name" class="border border-gray-300 rounded-lg py-2 px-4 bg-white w-full mt-2" placeholder="Full Name">
+                            </div>
+
+                            <div class="mt-4">
+                                <input type="email" name="email" class="border border-gray-300 rounded-lg py-2 px-4 bg-white w-full mt-2" placeholder="Email">
+                            </div>
+
+                            <!-- <div class="mt-4">
+                                <input type="text" name="phone-number" class="border border-gray-300 rounded-lg py-2 px-4 bg-white w-full mt-2" placeholder="Phone Number">
+                            </div> -->
+
+                            <div class="mt-4">
+                                <textarea name="message" id="" rows="5" class="border border-gray-300 rounded-lg py-2 px-4 bg-white w-full mt-2" placeholder="How can we help?"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-sky-900 hover:bg-sky-800 text-white mt-10 py-3 rounded-xl urbanist-600">Send</button>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-14 pb-8 mt-24">
+        <div class="w-10/12 mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-10 py-6">
+
+                <div>
+                    <a href="home.html" class="flex items-center montserrat-regular">
+                        <h1 class="text-2xl font-bold text-white">IDJM<span class="font-normal">TRANS</span></h1>
+                    </a>
+                    <p class="mt-2 text-gray-400 urbanist-400">Your Trusted Partner in Logistics and Moving</p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-2 lora-400 text-sm">Quick Links</h4>
+                    <ul class="text-gray-400 mt-3 urbanist-400">
+                        <li class="mt-1"><a href="logistics.html" class="hover:text-blue-400 text-lg">Commercial Logistic</a></li>
+                        <li class="mt-1"><a href="demenagement.html" class="hover:text-blue-400 text-lg">Demenagement</a></li>
+                        <li class="mt-1"><a href="contact.html" class="hover:text-blue-400 text-lg">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-2 lora-400 text-sm">Contact Us</h4>
+                    <p class="mt-4 text-gray-400 urbanist-400 text-lg">info@idjmtrans.com</p>
+                    <p class="mt-1 text-gray-400 urbanist-400 text-lg">+212 123 456 789</p>
+                    <br>
+                    <div>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 mx-2 text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 mx-2 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 mx-2 text-2xl"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 mx-2 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center mt-8 border-t border-gray-700 pt-4 opacity-75 text-sm">
+                <p>&copy; 2026 IDJMTRANS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
