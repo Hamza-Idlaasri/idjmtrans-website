@@ -1,10 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
+    <!-- Metatags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDJMTRANS</title>
+    <meta name="author" content="IDJMTRANS">
+    <meta name="robots" content="index, follow">
+    <title>IDJMTRANS | Expert en Transport de Marchandises et Déménagement au Maroc</title>
+    <meta name="description" content="IDJMTRANS est votre partenaire de confiance au Maroc pour le transport de marchandises B2B et le déménagement résidentiel. Solutions logistiques sécurisées, rapides et sur-mesure sur tout le territoire national.">
+    <meta name="keywords" content="transport de marchandises Maroc, entreprise de déménagement Casablanca, logistique B2B Maroc, transport routier, IDJMTRANS, transfert de bureaux">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.idjmtrans.ma/">
+    <meta property="og:title" content="IDJMTRANS | Transport de Marchandises & Déménagement au Maroc">
+    <meta property="og:description" content="Solutions de transport de marchandises B2B et déménagement résidentiel sur tout le Maroc. Fiabilité et professionnalisme garantis.">
+    <meta property="og:image" content="https://www.idjmtrans.ma/images/logo/IDJMTRANS-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="IDJMTRANS | Transport de Marchandises & Déménagement au Maroc">
+    <meta property="twitter:description" content="Solutions de transport de marchandises B2B et déménagement résidentiel sur tout le Maroc. Fiabilité et professionnalisme garantis.">
+    <meta property="twitter:image" content="https://www.idjmtrans.ma/images/logo/IDJMTRANS-logo.png">
+    <!-- END OF METATAGS -->
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "IDJMTRANS",
+            "image": "https://www.idjmtrans.ma/images/logo/IDJMTRANS-logo.png",
+            "@id": "https://www.idjmtrans.com",
+            "url": "https://www.idjmtrans.com",
+            "telephone": "+212623232323",
+            "priceRange": "$$",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Votre Adresse",
+                "addressLocality": "Casablanca",
+                "postalCode": "20000",
+                "addressCountry": "MA"
+            },
+            "description": "Experts en transport de marchandises B2B et services de déménagement professionnel dans tout le Maroc.",
+            "serviceArea": {
+                "@type": "Country",
+                "name": "Morocco"
+            },
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/company/idjmtrans"
+            ]
+        }
+    </script>
 
     <!-- Tailwindcss -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -19,53 +72,76 @@
 
 <body>
 
-    <!-- NavBar -->
-    <nav class="w-full bg-white montserrat-regular">
+    <!-- Large NavBar -->
+    <nav class="w-full bg-white hidden lg:block">
 
         <div class="w-10/12 py-6 mx-auto flex flex-wrap justify-between items-center gap-4">
 
             <!-- Logo -->
             <a href="home.html" class="flex items-center">
-                <h1 class="text-2xl font-bold text-gray-800">IDJM<span class="font-normal">TRANS</span></h1>
+                <img src="images/logo/IDJMTRANS-logo.png" alt="IDJMTRANS Logo" width="150">
+                <!-- <p class="text-2xl font-bold text-gray-800">IDJM<span class="font-normal">TRANS</span></p> -->
             </a>
 
-            <!-- Hamburger button — mobile only -->
-            <button class="lg:hidden flex items-center text-gray-700 text-2xl" onclick="document.getElementById('nav-links').classList.toggle('hidden')" aria-label="Toggle menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
             <!-- Links -->
-            <div id="nav-links" class="hidden lg:flex gap-8 xl:gap-12 text-sm items-center w-full lg:w-auto flex-col lg:flex-row">
-                <a href="home.html" class="text-gray-700 hover:text-blue-500">Home</a>
-                <a href="logistics.html" class="text-gray-700 hover:text-blue-500">Commertial Logistic</a>
-                <a href="demenagement.html" class="text-gray-700 hover:text-blue-500">Demenagement</a>
-                <a href="contact.html" class="hover:text-white hover:bg-indigo-600 text-indigo-700 bg-indigo-100 rounded-xl px-5 py-2 transition">Contact us</a>
+            <div class="hidden lg:flex gap-8 xl:gap-12 items-center w-full lg:w-auto flex-col lg:flex-row montserrat-regular text-sm">
+                <a href="home.html" class="text-gray-900 hover:text-blue-500">Accueil</a>
+                <a href="transport-de-marchandises.html" class="text-gray-900 hover:text-blue-500">Transport Marchandise</a>
+                <a href="demenagement.html" class="text-gray-900 hover:text-blue-500">Demenagement</a>
+                <a href="#about-us" class="text-gray-900 hover:text-blue-500">Qui Sommes-Nous</a>
+                <!-- <a href="contact.html" class="text-gray-700 hover:text-blue-500">Contactez-Nous</a> -->
+                <a href="contact.html" class="hover:text-white hover:bg-sky-600 text-sky-700 bg-sky-100 rounded-xl px-5 py-2 transition">Contactez-Nous</a>
             </div>
 
         </div>
 
     </nav>
 
+    <!-- Mobile Nav -->
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-82 lg:hidden z-99" x-data="{ open: false }" x-cloak>
+
+        <div class="flex justify-between items-center bg-white py-3 px-6 rounded-xl shadow-xl border border-gray-200">
+            <a href="home.html" class="flex items-center montserrat-regular">
+                <p class="text-xl font-bold text-gray-800">IDJM<span class="font-normal">TRANS</span></p>
+            </a>
+
+            <button class="hover:text-blue-500 cursor-pointer" @click="open = !open" aria-label="Toggle mobile menu">
+                <i class="fa-solid fa-grip-lines fa-lg" x-show="!open"></i>
+                <i class="fa-solid fa-xmark fa-lg" x-show="open"></i>
+            </button>
+        </div>
+
+        <div x-show="open" @click.outside="open = false" x-transition x-cloak class="w-full bg-white rounded-xl shadow-xl mt-4 px-8 py-6">
+            <ul>
+                <li class="py-3 text-lg montserrat-regular"><a href="home.html" class="hover:text-blue-500">Accueil</a></li>
+                <li class="py-3 text-lg montserrat-regular"><a href="transport-de-marchandises.html" class="hover:text-blue-500">Transport de Marchandises</a></li>
+                <li class="py-3 text-lg montserrat-regular"><a href="demenagement.html" class="hover:text-blue-500">Déménagement</a></li>
+                <li class="py-3 text-lg montserrat-regular"><a href="#about-us" class="hover:text-blue-500">Qui Sommes-Nous</a></li>
+                <li class="py-3 text-lg montserrat-regular"><a href="contact.html" class="hover:text-blue-500">Contactez-Nous</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="w-10/12 mx-auto">
+    <section class="w-10/12 mx-auto lg:mt-0 mt-16">
 
         <div class="py-10 lg:py-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
 
             <!-- Text -->
             <div class="w-full lg:w-1/2">
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 lora-400">Precision Transport for Business & Home</h2>
-                <p class="text-gray-600 mb-6 montserrat-regular mt-6 lg:mt-16">IDJMTRANS provides expert logistics for your commercial needs and professional moving services for your residential ones. Safe, efficient, and always on time.</p>
+                <h1 class="text-4xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 montserrat-bold leading-tight">Expertise en Transport de Marchandises et Déménagement</h1>
+                <p class="text-gray-900 text-lg mb-6 montserrat-regular mt-6">IDJMTRANS vous propose une logistique experte pour vos besoins commerciaux et des services de déménagement professionnels pour vos déménagements résidentiels. Sécurité, efficacité et ponctualité garanties.</p>
 
-                <div class="flex flex-col sm:flex-row gap-4 mt-4">
-                    <a href="logistics.html" class="montserrat-regular bg-sky-900 text-white px-8 py-3 rounded-xl hover:bg-sky-800 text-center">Get Logistics Quote</a>
-                    <a href="demenagement.html" class="montserrat-regular bg-amber-300 text-black px-8 py-3 rounded-xl hover:bg-amber-400 text-center">Get Moving Quote</a>
+                <div class="flex flex-col sm:flex-row gap-4 mt-10">
+                    <a href="transport-de-marchandises.html" class="montserrat-regular bg-sky-900 text-white px-8 py-3 rounded-xl hover:bg-sky-800 text-center">Devis Transport</a>
+                    <a href="demenagement.html" class="montserrat-regular bg-amber-300 text-black px-8 py-3 rounded-xl hover:bg-amber-400 text-center">Devis Déménagement</a>
                 </div>
             </div>
 
             <!-- Images -->
             <div class="w-full lg:w-1/2">
                 <div class="w-full h-56 md:h-72 bg-blue-200 rounded-3xl shadow-xl overflow-hidden">
-                    <img src="images/truck 3.jpg" alt="Logistics Image" class="w-full h-full object-cover">
+                    <img src="images/truck open.png" alt="Logistics Image" class="w-full h-full object-cover">
                 </div>
 
                 <br>
@@ -75,53 +151,76 @@
                         <img src="images/moving 1.jpg" alt="" class="w-full h-full object-cover">
                     </div>
                     <div class="w-full sm:w-1/2 h-52 bg-yellow-200 rounded-3xl shadow-xl overflow-hidden">
-                        <img src="images/moving 2.jpg" alt="" class="w-full h-full object-cover">
+                        <img src="images/office 2.jpg" alt="" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
 
         </div>
 
+    </section>
+
+    <!-- Partnerships -->
+    <section class="py-12 overflow-hidden" x-data>
+        <p class="urbanist-400 text-2xl sm:text-3xl px-4 sm:px-0 text-gray-700 text-center mx-auto mb-12">
+            Nos partenaires nous font confiance
+        </p>
+
+        <!-- Wrapper with overflow-hidden to hide the scroll outside the container -->
+        <div class="w-10/12 relative mx-auto overflow-hidden pause-on-hover">
+
+            <!-- The Moving Track -->
+            <div class="animate-marquee flex items-center gap-12 sm:gap-24">
+
+                <!-- First Set of Logos -->
+                <div class="flex items-center gap-12 sm:gap-24">
+                    <img src="images/partners/aramex.png" alt="Logo de Aramex - Partenaire IDJMTRANS" class="w-32 h-auto object-contain">
+                    <img src="images/partners/candy.png" alt="Logo de Candy - Partenaire IDJMTRANS" class="w-32 h-auto object-contain">
+                    <img src="images/partners/lc_waikiki.png" alt="Logo de LC Waikiki - Partenaire IDJMTRANS" class="w-32 h-auto object-contain">
+                    <img src="images/partners/azbane.png" alt="Logo de Azbane - Partenaire IDJMTRANS" class="w-32 h-auto object-contain">
+                    <img src="images/partners/vectorys.png" alt="Logo de Vectorys - Partenaire IDJMTRANS" class="w-32 h-auto object-contain">
+                    <img src="images/partners/samsung.png" alt="Logo de Samsung - Partenaire IDJMTRANS" class="w-32 h-auto object-contain">
+                </div>
+
+                <!-- Duplicate Set (Required for seamless looping) -->
+                <div class="flex items-center gap-12 sm:gap-24" aria-hidden="true">
+                    <img src="images/partners/aramex.png" alt="Logo de Aramex - Partenaire IDJMTRANS" class="w-32 h-auto object-contain">
+                    <img src="images/partners/candy.png" alt="Logo de Candy - Partenaire IDJMTRANS" class="w-32 h-auto object-contain">
+                    <img src="images/partners/lc_waikiki.png" alt="Logo de LC Waikiki - Partenaire IDJMTRANS" class="w-32 h-auto object-contain">
+                    <img src="images/partners/azbane.png" alt="Logo de Azbane - Partenaire IDJMTRANS" class="w-32 h-auto object-contain">
+                    <img src="images/partners/vectorys.png" alt="Logo de Vectorys - Partenaire IDJMTRANS" class="w-32 h-auto object-contain">
+                    <img src="images/partners/samsung.png" alt="Logo de Samsung - Partenaire IDJMTRANS" class="w-32 h-auto object-contain">
+                </div>
+
+            </div>
+        </div>
     </section>
 
     <!-- Our Numbers -->
-    <section class="w-10/12 mx-auto mt-16">
+    <section class="mt-16 bg-gradient-to-br from-gray-900 to-sky-700">
 
-        <div class="py-14">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl w-full lg:w-1/2 urbanist-400">
-                We move goods and lives accross Morocco with proven results
+        <div class="w-10/12 mx-auto py-16">
+
+            <h2 class="text-2xl md:text-3xl lg:text-4xl w-full lg:w-1/2 mx-auto urbanist-400 text-center text-gray-200">
+                Nous transportons à travers le Maroc avec des résultats éprouvés
             </h2>
-        </div>
 
-        <div class="flex flex-col sm:flex-row flex-wrap justify-start gap-6 lg:gap-20">
+            <br>
 
-            <div class="w-full sm:w-64 lg:w-72 bg-gradient-to-tr from-indigo-200 to-indigo-50 rounded-[30px] p-6 urbanist-400 flex flex-col justify-between gap-6 lg:h-72">
-                <div class="text-indigo-300">
-                    <i class="fa-solid fa-check fa-3x"></i>
+            <div class="flex flex-col sm:flex-row gap-y-18 justify-between items-center my-16">
+                <div class="text-center sm:text-left">
+                    <p class="text-8xl text-white urbanist-600">500+</p>
+                    <p class="mt-3 text-gray-200 text-lg">Missions réussies</p>
                 </div>
-                <div>
-                    <p class="text-6xl lg:text-7xl font-bold">500+</p>
-                    <p class="mt-3 text-gray-700 text-lg">Mission successfuly completed</p>
+                <div class="h-1 w-52 sm:h-44 sm:w-1 bg-gray-200 opacity-30"></div>
+                <div class="text-center sm:text-left">
+                    <p class="text-8xl text-white urbanist-600">98%</p>
+                    <p class="mt-3 text-gray-200 text-lg">Taux de ponctualité</p>
                 </div>
-            </div>
-
-            <div class="w-full sm:w-64 lg:w-72 bg-gradient-to-tr from-lime-200 to-lime-50 rounded-[30px] p-6 urbanist-400 flex flex-col justify-between gap-6 lg:h-72">
-                <div class="text-lime-300">
-                    <i class="fa-regular fa-hourglass fa-3x"></i>
-                </div>
-                <div>
-                    <p class="text-6xl lg:text-7xl font-bold">98%</p>
-                    <p class="mt-3 text-gray-700 text-lg">On-time delivery rate</p>
-                </div>
-            </div>
-
-            <div class="w-full sm:w-64 lg:w-72 bg-gradient-to-tr from-stone-200 to-stone-50 rounded-[30px] p-6 urbanist-400 flex flex-col justify-between gap-6 lg:h-72">
-                <div class="text-stone-300">
-                    <i class="fa-solid fa-location-dot fa-3x"></i>
-                </div>
-                <div>
-                    <p class="text-6xl lg:text-7xl font-bold">16</p>
-                    <p class="mt-3 text-gray-700 text-lg">Cities covered nationwide</p>
+                <div class="h-1 w-52 sm:h-44 sm:w-1 bg-gray-200 opacity-30"></div>
+                <div class="text-center sm:text-left">
+                    <p class="text-8xl text-white urbanist-600">16</p>
+                    <p class="mt-3 text-gray-200 text-lg">Villes couvertes au Maroc</p>
                 </div>
             </div>
 
@@ -129,220 +228,193 @@
 
     </section>
 
-    <!-- Details -->
-    <section class="mt-24 lg:mt-44">
+    <!-- Our Services -->
+    <section class="w-11/12 sm:w-10/12 mx-auto py-24 mt-12">
+        <h2 class="text-4xl lg:text-5xl w-full lg:w-1/2 mx-auto montserrat-bold text-center text-gray-900">
+            Nos Services
+        </h2>
 
         <!-- Logistics -->
-        <div class="bg-gradient-to-r from-violet-100 to-indigo-100 py-16 lg:py-24">
+        <div class="flex flex-col sm:flex-row justify-between items-start gap-6 mt-18">
+            <div class="w-full sm:w-1/2">
 
-            <div class="w-10/12 mx-auto">
-
-                <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
-
-                    <div class="w-full lg:w-1/2 lg:p-8">
-                        <img src="images/truck 4.jpg" alt="" class="rounded-[30px] w-full">
+                <!-- Description -->
+                <div class="rounded-[30px] p-10 bg-gray-200">
+                    <h3 class="text-4xl urbanist-600">Transport de Marchandises</h3>
+                    <p class="text-gray-600 text-lg urbanist-400 my-6">IDJMTRANS offre un transport de marchandises fiable et sécurisé, adapté aux besoins professionnels et particuliers.</p>
+                    <div class="flex gap-4 mt-12">
+                        <a href="transport-de-marchandises.html" class="montserrat-regular bg-sky-900 text-white px-8 py-3 rounded-xl hover:bg-sky-800">Devis Transport</a>
                     </div>
-
-                    <div class="w-full lg:w-1/2 lg:p-12">
-                        <h2 class="lora-400 text-3xl lg:text-4xl text-slate-800">Commercial Logistics</h2>
-                        <p class="urbanist-400 text-gray-700 mt-4">
-                            Fast, secure, and reliable commercial transport at your fingertips. We bridge the distance between your business and your clients across Morocco, providing the professional infrastructure you need for seamless delivery.
-                        </p>
-
-                        <div class="my-8 lg:my-10">
-                            <a href="logistics.html" class="montserrat-regular bg-sky-900 text-white px-8 py-3 rounded-xl hover:bg-sky-800">Get Logistics Quote</a>
-                        </div>
-                    </div>
-
                 </div>
 
+                <!-- Img -->
+                <div class="mt-6 h-96 lg:h-[660px] overflow-hidden rounded-[30px]">
+                    <img src="images/truck 2.jpg" alt="" class="object-cover">
+                </div>
             </div>
+            <div class="w-full sm:w-1/2">
+                <div class="bg-slate-800 rounded-[30px] p-10">
 
-            <!-- How it works — Logistics -->
-            <div class="w-10/12 mx-auto py-16 lg:py-24">
+                    <p class="urbanist-400 text-xl text-gray-300">Comment ça marche</p>
 
-                <h2 class="font-semibold text-3xl md:text-4xl lg:text-5xl text-center urbanist-400">How It Works</h2>
-
-                <div class="mt-16 lg:mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
-                    <div>
-                        <div class="size-24 lg:size-32 rounded-full flex justify-center items-center bg-gradient-to-tr from-indigo-200 to-white">
-                            <i class="fa-regular fa-file-lines fa-2x opacity-30 text-indigo-400"></i>
-                        </div>
-                        <div class="mt-6">
-                            <p class="urbanist-400 text-indigo-500 font-bold uppercase text-sm tracking-wider">Step 1</p>
-                            <p class="font-semibold text-lg mt-2 montserrat-semibold">Request Service</p>
-                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">Submit your shipping details and destination across Morocco.</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="size-24 lg:size-32 rounded-full flex justify-center items-center bg-gradient-to-tr from-indigo-200 to-white">
-                            <i class="fa-regular fa-handshake fa-2x opacity-30 text-indigo-400"></i>
-                        </div>
-                        <div class="mt-6">
-                            <p class="urbanist-400 text-indigo-500 font-bold uppercase text-sm tracking-wider">Step 2</p>
-                            <p class="font-semibold text-lg mt-2 montserrat-semibold">Receive Tailored Quote</p>
-                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">Get a transparent, competitive price based on your cargo volume.</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="size-24 lg:size-32 rounded-full flex justify-center items-center bg-gradient-to-tr from-indigo-200 to-white">
-                            <i class="fa-regular fa-calendar-check fa-2x opacity-30 text-indigo-400"></i>
-                        </div>
-                        <div class="mt-6">
-                            <p class="urbanist-400 text-indigo-500 font-bold uppercase text-sm tracking-wider">Step 3</p>
-                            <p class="font-semibold text-lg mt-2 montserrat-semibold">Scheduled Transport</p>
-                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">We handle the loading and logistics for a smooth pickup and transit.</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="size-24 lg:size-32 rounded-full flex justify-center items-center bg-gradient-to-tr from-indigo-200 to-white">
-                            <i class="fa-solid fa-truck-ramp-box fa-2x opacity-30 text-indigo-400"></i>
-                        </div>
-                        <div class="mt-6">
-                            <p class="urbanist-400 text-indigo-500 font-bold uppercase text-sm tracking-wider">Step 4</p>
-                            <p class="font-semibold text-lg mt-2 montserrat-semibold">Delivery Complete</p>
-                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">Your products arrive safely with full delivery confirmation provided.</p>
-                        </div>
+                    <div class="mt-6">
+                        <ul>
+                            <li class="text-white py-4">
+                                <div class="size-14 rounded-2xl flex justify-center items-center bg-lime-400 text-slate-800">
+                                    <i class="fa-regular fa-file-lines fa-lg"></i>
+                                </div>
+                                <p class="text-sm text-sky-400 mt-4">STEP 1</p>
+                                <p class="urbanist-400 mt-2 text-2xl">Demande de devis</p>
+                                <p class="text-gray-400 mt-2">Soumettez vos besoins d'expédition et votre destination au Maroc. Nos experts analysent vos volumes pour vous proposer une offre compétitive et adaptée.</p>
+                            </li>
+                            <li class="text-white py-4 mt-4">
+                                <div class="size-14 rounded-2xl flex justify-center items-center bg-lime-400 text-slate-800">
+                                    <i class="fa-regular fa-handshake fa-lg"></i>
+                                </div>
+                                <p class="text-sm text-sky-400 mt-4">STEP 2</p>
+                                <p class="urbanist-400 mt-2 text-2xl">Obtenez un devis clair</p>
+                                <p class="text-gray-400 mt-2">Nous vous fournirons un estimate transparent sans frais cachés, afin que vous puissiez planifier votre budget en toute confiance.</p>
+                            </li>
+                            <li class="text-white py-4 mt-4">
+                                <div class="size-14 rounded-2xl flex justify-center items-center bg-lime-400 text-slate-800">
+                                    <i class="fa-solid fa-truck-ramp-box fa-lg"></i>
+                                </div>
+                                <p class="text-sm text-sky-400 mt-4">STEP 3</p>
+                                <p class="urbanist-400 mt-2 text-2xl">Collecte et chargement</p>
+                                <p class="text-gray-400 mt-2">Nos équipes procèdent à la collecte de vos marchandises. Nous assurons une manutention rigoureuse et un chargement sécurisé dans notre flotte dédiée.</p>
+                            </li>
+                            <li class="text-white py-4 mt-4">
+                                <div class="size-14 rounded-2xl flex justify-center items-center bg-lime-400 text-slate-800">
+                                    <i class="fa-regular fa-calendar-check fa-lg"></i>
+                                </div>
+                                <p class="text-sm text-sky-400 mt-4">STEP 4</p>
+                                <p class="urbanist-400 mt-2 text-2xl">Livraison ponctuelle</p>
+                                <p class="text-gray-400 mt-2">Nous assurons la livraison finale de vos produits avec précision. Nos chauffeurs s'assurent que votre marchandise arrive intacte, dans le respect strict des délais.</p>
+                            </li>
+                        </ul>
                     </div>
 
                 </div>
             </div>
-
         </div>
 
         <!-- Moving -->
-        <div class="bg-gradient-to-l from-gray-100 to-amber-100 py-16 lg:py-24">
+        <div class="flex flex-col sm:flex-row justify-between items-start gap-6 mt-18">
+            <div class="w-full sm:w-1/2 order-2 sm:order-1">
+                <div class="bg-taupe-800 rounded-[30px] p-10">
 
-            <div class="w-10/12 mx-auto">
+                    <p class="urbanist-400 text-xl text-gray-300">Comment ça marche</p>
 
-                <div class="flex flex-col-reverse lg:flex-row justify-between items-center gap-8">
-
-                    <div class="w-full lg:w-1/2 lg:p-8">
-                        <h2 class="lora-400 text-3xl lg:text-4xl text-slate-800">Moving</h2>
-                        <p class="urbanist-400 text-gray-700 mt-4 lg:w-11/12">
-                            Whether you are moving your family to a new home or relocating your entire office, we make the transition stress-free. Our team provides expert packing and careful handling for everything from delicate household items to professional office equipment,
-                            ensuring a seamless move across Morocco.
-                        </p>
-
-                        <div class="mt-8 lg:mt-12">
-                            <a href="demenagement.html" class="montserrat-regular bg-amber-300 text-black px-8 py-3 rounded-xl hover:bg-amber-400">Get Moving Quote</a>
-                        </div>
-                    </div>
-
-                    <div class="w-full lg:w-1/2 h-72 lg:h-[500px] lg:p-12">
-                        <img src="images/moving 1.jpg" alt="" class="rounded-[30px] object-cover w-full h-full">
+                    <div class="mt-6">
+                        <ul>
+                            <li class="text-white py-4">
+                                <div class="size-14 rounded-2xl flex justify-center items-center bg-orange-400 text-slate-900">
+                                    <i class="fa-regular fa-file-lines fa-lg"></i>
+                                </div>
+                                <p class="text-sm text-cyan-300 mt-4">STEP 1</p>
+                                <p class="urbanist-400 mt-2 text-2xl">Parlez-nous de votre déménagement</p>
+                                <p class="text-gray-400 mt-2">Veuillez remplir le formulaire avec les informations requises afin que nous puissions déterminer le coût du déménagement.</p>
+                            </li>
+                            <li class="text-white py-4 mt-4">
+                                <div class="size-14 rounded-2xl flex justify-center items-center bg-orange-400 text-slate-900">
+                                    <i class="fa-regular fa-handshake fa-lg"></i>
+                                </div>
+                                <p class="text-sm text-cyan-300 mt-4">STEP 2</p>
+                                <p class="urbanist-400 mt-2 text-2xl">Obtenez un devis clair</p>
+                                <p class="text-gray-400 mt-2">Nous vous fournirons un estimate transparent sans frais cachés, afin que vous puissiez planifier votre budget en toute confiance.</p>
+                            </li>
+                            <li class="text-white py-4 mt-4">
+                                <div class="size-14 rounded-2xl flex justify-center items-center bg-orange-400 text-slate-900">
+                                    <i class="fa-solid fa-truck-ramp-box fa-lg"></i>
+                                </div>
+                                <p class="text-sm text-cyan-300 mt-4">STEP 3</p>
+                                <p class="urbanist-400 mt-2 text-2xl">Emballage & Chargement experts</p>
+                                <p class="text-gray-400 mt-2">Notre équipe intervient pour emballer, protéger et charger vos objets dans nos véhicules sécurisés avec le plus grand soin.</p>
+                            </li>
+                            <li class="text-white py-4 mt-4">
+                                <div class="size-14 rounded-2xl flex justify-center items-center bg-orange-400 text-slate-900">
+                                    <i class="fa-regular fa-calendar-check fa-lg"></i>
+                                </div>
+                                <p class="text-sm text-cyan-300 mt-4">STEP 4</p>
+                                <p class="urbanist-400 mt-2 text-2xl">Livraison & Mise en Place</p>
+                                <p class="text-gray-400 mt-2">Nous livrons tout ce que vous avez besoin à votre nouvel seuil et vous aidons à placer les objets exactement là où vous les voulez.</p>
+                            </li>
+                        </ul>
                     </div>
 
                 </div>
-
             </div>
 
-            <!-- How it works — Moving -->
-            <div class="w-10/12 mx-auto py-16 lg:py-24">
+            <div class="w-full sm:w-1/2 order-1 sm:order-2">
 
-                <h2 class="font-semibold text-3xl md:text-4xl lg:text-5xl text-center urbanist-400">How It Works</h2>
-
-                <div class="mt-16 lg:mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
-                    <div>
-                        <div class="size-24 lg:size-32 rounded-full flex justify-center items-center bg-gradient-to-tr from-amber-200 to-white">
-                            <i class="fa-regular fa-file-lines fa-2x opacity-30 text-amber-400"></i>
-                        </div>
-                        <div class="mt-6">
-                            <p class="urbanist-400 text-amber-600 font-bold uppercase text-sm tracking-wider">Step 1</p>
-                            <p class="font-semibold text-lg mt-2 montserrat-semibold">Tell Us About Your Move</p>
-                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">Share your current location, your new home destination, and your preferred moving date.</p>
-                        </div>
+                <!-- Description -->
+                <div class="rounded-[30px] p-10 bg-amber-100">
+                    <h3 class="text-4xl urbanist-600">Demenagement</h3>
+                    <p class="text-gray-600 text-lg urbanist-400 my-6">IDJMTRANS propose un service de déménagement fiable et sécurisé, conçu pour rendre vos transitions de domicile ou de bureau simples et sereines.</p>
+                    <div class="flex gap-4 mt-12">
+                        <a href="demenagement.html" class="montserrat-regular bg-amber-300 text-black px-8 py-3 rounded-xl hover:bg-amber-400 text-center">Devis Déménagement</a>
                     </div>
+                </div>
 
-                    <div>
-                        <div class="size-24 lg:size-32 rounded-full flex justify-center items-center bg-gradient-to-tr from-amber-200 to-white">
-                            <i class="fa-regular fa-handshake fa-2x opacity-30 text-amber-400"></i>
-                        </div>
-                        <div class="mt-6">
-                            <p class="urbanist-400 text-amber-600 font-bold uppercase text-sm tracking-wider">Step 2</p>
-                            <p class="font-semibold text-lg mt-2 montserrat-semibold">Get a Clear Quote</p>
-                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">We'll provide a transparent estimate with no hidden fees, so you can plan your budget with confidence.</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="size-24 lg:size-32 rounded-full flex justify-center items-center bg-gradient-to-tr from-amber-200 to-white">
-                            <i class="fa-regular fa-calendar-check fa-2x opacity-30 text-amber-400"></i>
-                        </div>
-                        <div class="mt-6">
-                            <p class="urbanist-400 text-amber-600 font-bold uppercase text-sm tracking-wider">Step 3</p>
-                            <p class="font-semibold text-lg mt-2 montserrat-semibold">Expert Packing & Loading</p>
-                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">Our team arrives to carefully pack, protect, and load your belongings into our secure vehicles.</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="size-24 lg:size-32 rounded-full flex justify-center items-center bg-gradient-to-tr from-amber-200 to-white">
-                            <i class="fa-solid fa-truck-ramp-box fa-2x opacity-30 text-amber-400"></i>
-                        </div>
-                        <div class="mt-6">
-                            <p class="urbanist-400 text-amber-600 font-bold uppercase text-sm tracking-wider">Step 4</p>
-                            <p class="font-semibold text-lg mt-2 montserrat-semibold">Delivery & Setup</p>
-                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">We deliver everything to your new doorstep and help place items exactly where you want them.</p>
-                        </div>
-                    </div>
-
+                <!-- Img -->
+                <div class="mt-6 h-96 lg:h-[710px] overflow-hidden rounded-[30px]">
+                    <img src="images/moving 1.jpg" alt="" class="object-cover">
                 </div>
             </div>
 
         </div>
-
     </section>
 
     <!-- FAQ -->
-    <section class="w-10/12 mx-auto my-24 lg:my-44">
+    <section class="bg-gradient-to-b from-white via-rose-100 to-white">
+        <div class="w-11/12 sm:w-10/12 mx-auto my-24 lg:mb-44">
 
-        <div class="flex flex-col lg:flex-row items-start gap-10">
-
-            <div class="w-full lg:w-1/2">
-                <h2 class="text-2xl lg:text-3xl">Frequently Asked Questions</h2>
-
+            <div class="w-full text-center">
+                <h2 class="text-3xl lg:text-5xl montserrat-bold">Questions fréquentes (FAQ)</h2>
+                <!-- 
                 <div class="mt-8 lg:mt-16">
-                    <a href="contact.html" class="bg-black hover:bg-gray-800 rounded-lg text-white px-6 py-3 text-sm">Contact Us For More<i class="fa-solid fa-arrow-right fa-rotate-by ms-3 text-gray-400 -rotate-45"></i></a>
-                </div>
+                    <a href="contact.html" class="bg-black hover:bg-gray-800 rounded-lg text-white px-6 py-3 text-sm hidden lg:inline-block">Contact Us For More<i class="fa-solid fa-arrow-right fa-rotate-by ms-3 text-gray-400 -rotate-45"></i></a>
+                </div> -->
             </div>
 
-            <!-- FAQ Items -->
-            <div x-data="{ active: null }" class="w-full lg:w-2/3">
+            <!-- FAQ items -->
+            <div x-data="{ active: null }" class="w-full lg:w-2/3 mx-auto mt-24">
 
-                <div class="border-b py-4 cursor-pointer" @click="active === 1 ? active = null : active = 1">
+                <div class="bg-white hover:border border-sky-700 transition p-8 rounded-2xl cursor-pointer" @click="active === 1 ? active = null : active = 1">
                     <div class="flex justify-between items-center">
-                        <p class="text-lg lg:text-2xl font-semibold montserrat-regular">What areas do you serve?</p>
+                        <h3 class="text-lg lg:text-2xl montserrat-regular">Quelles sont vos zones d'intervention ?</h3>
                         <i :class="active === 1 ? 'fa-solid fa-minus' : 'fa-solid fa-plus'" class="text-blue-500 transition-colors duration-200"></i>
                     </div>
-                    <p x-show="active === 1" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-4" x-cloak>We serve all major cities across Morocco, including Casablanca, Rabat, Marrakech, and more.</p>
+                    <p x-show="active === 1" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-0 sm:ps-4 text-lg" x-cloak>Nous assurons des prestations sur l'ensemble du territoire marocain, avec une forte réactivité dans les grandes zones économiques comme Casablanca, Rabat et Marrakech.</p>
                 </div>
 
-                <br>
-
-                <div class="border-b py-4 cursor-pointer" @click="active === 2 ? active = null : active = 2">
+                <div class="bg-white hover:border border-sky-700 transition mt-5 p-8 rounded-2xl cursor-pointer" @click="active === 2 ? active = null : active = 2">
                     <div class="flex justify-between items-center">
-                        <p class="text-lg lg:text-2xl font-semibold montserrat-regular">How do I get a quote?</p>
+                        <h3 class="text-lg lg:text-2xl montserrat-regular">Comment obtenir un devis personnalisé ?</h3>
                         <i :class="active === 2 ? 'fa-solid fa-minus' : 'fa-solid fa-plus'" class="text-blue-500 transition-colors duration-200"></i>
                     </div>
-                    <p x-show="active === 2" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-4" x-cloak>You can request a quote by clicking on the "Get Quote" button or by contacting us directly through our contact page.</p>
+                    <p x-show="active === 2" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-0 sm:ps-4 text-lg" x-cloak>Il vous suffit de nous contacter via notre formulaire ou WhatsApp. Nos experts analyseront vos besoins spécifiques pour vous établir une proposition tarifaire transparente, sans frais cachés.</p>
                 </div>
 
-                <br>
-
-                <div class="border-b py-4 cursor-pointer" @click="active === 3 ? active = null : active = 3">
+                <div class="bg-white hover:border border-sky-700 transition mt-5 p-8 rounded-2xl cursor-pointer" @click="active === 3 ? active = null : active = 3">
                     <div class="flex justify-between items-center">
-                        <p class="text-lg lg:text-2xl font-semibold montserrat-regular">What types of goods do you transport?</p>
+                        <h3 class="text-lg lg:text-2xl montserrat-regular">Quels types de marchandises transportez-vous ?</h3>
                         <i :class="active === 3 ? 'fa-solid fa-minus' : 'fa-solid fa-plus'" class="text-blue-500 transition-colors duration-200"></i>
                     </div>
-                    <p x-show="active === 3" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-4" x-cloak>We transport a wide range of goods, including household items, office equipment, and commercial products. We also offer specialized services for fragile and valuable items.</p>
+                    <p x-show="active === 3" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-0 sm:ps-4 text-lg" x-cloak>Nous gérons aussi bien le fret industriel (équipements, matières premières) que le transfert de mobilier professionnel ou personnel. Chaque type de marchandise bénéficie d'un protocole d'emballage et de sécurisation adapté.</p>
                 </div>
 
+                <div class="bg-white hover:border border-sky-700 transition mt-5 p-8 rounded-2xl cursor-pointer" @click="active === 4 ? active = null : active = 4">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg lg:text-2xl montserrat-regular">Vos services sont-ils assurés ?</h3>
+                        <i :class="active === 4 ? 'fa-solid fa-minus' : 'fa-solid fa-plus'" class="text-blue-500 transition-colors duration-200"></i>
+                    </div>
+                    <p x-show="active === 4" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-0 sm:ps-4 text-lg" x-cloak>Oui. La sécurité de vos biens est notre priorité. Tous nos transports sont couverts par une assurance complète "Responsabilité Civile Marchandises", vous garantissant une tranquillité d'esprit totale.</p>
+                </div>
+
+            </div>
+            <div class="mt-8 lg:mt-16 text-center w-full">
+                <a href="contact.html" class="bg-black hover:bg-gray-800 rounded-lg text-white px-6 py-3 text-sm">Contactez-nous pour plus d'info<i class="fa-solid fa-arrow-right fa-rotate-by ms-3 text-gray-400 -rotate-45"></i></a>
             </div>
 
         </div>
@@ -354,35 +426,25 @@
         <img src="images/truck 1 hor.jpg" alt="" class="w-full h-full object-cover brightness-50">
 
         <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 sm:w-4/5 lg:w-1/2">
-            <h2 class="text-3xl md:text-4xl lg:text-6xl font-bold text-left text-white lora-400">Ready to get moving across Morocco?</h2>
-            <p class="text-white/80 text-sm md:text-lg mt-4 urbanist-400 text-left">Whether you're scaling your business logistics or moving to a new city, we're here to make the transition effortless. Let's talk</p>
+            <h2 class="text-3xl md:text-4xl lg:text-6xl font-bold text-left text-white lora-400">La logistique et le déménagement en toute sérénité</h2>
+            <p class="text-white/80 text-sm md:text-lg mt-4 urbanist-400 text-left">Que vous souhaitiez optimiser votre chaîne logistique ou organiser un transfert résidentiel, notre expertise garantit la réussite de vos projets partout dans le Royaume. Parlons-en dès aujourd'hui.</p>
 
             <div class="flex flex-col sm:flex-row gap-4 mt-8 lg:mt-12 justify-start">
-                <a href="logistics.html" class="montserrat-regular bg-sky-900 text-white px-8 py-3 rounded-xl hover:bg-sky-800 text-center">Get Logistics Quote</a>
-                <a href="demenagement.html" class="montserrat-regular bg-amber-400 text-black px-8 py-3 rounded-xl hover:bg-amber-300 text-center">Get Moving Quote</a>
+                <a href="transport-de-marchandises.html" class="montserrat-regular bg-sky-900 text-white px-8 py-3 rounded-xl hover:bg-sky-800 text-center">Devis Transport</a>
+                <a href="demenagement.html" class="montserrat-regular bg-amber-400 text-black px-8 py-3 rounded-xl hover:bg-amber-300 text-center">Devis Déménagement</a>
             </div>
         </div>
     </section>
 
     <!-- About us -->
-    <section class="w-10/12 mx-auto mt-24">
+    <section class="w-11/12 sm:w-10/12 mx-auto my-24" id="about-us">
 
-        <div class="py-10 lg:py-16 flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
-
-            <!-- Logo block -->
-            <div class="w-full lg:w-1/2 h-56 lg:h-96 flex justify-center items-center montserrat-regular bg-gradient-to-tl from-indigo-300 to-indigo-50 rounded-[30px]">
-                <p class="text-4xl lg:text-6xl font-bold text-gray-800">IDJM<span class="font-normal">TRANS</span></p>
-            </div>
-
-            <!-- Text -->
-            <div class="w-full lg:w-1/2 lg:py-14">
-                <h2 class="text-3xl lg:text-4xl">About Us</h2>
-                <p class="text-gray-700 mt-4 text-base lg:text-lg urbanist-400 montserrat-regular">
-                    IDJMTRANS is a Moroccan transport provider dedicated to moving the things that matter most. From complex commercial logistics and supply chain solutions to personal home and office relocations, we combine nationwide reach with a commitment to safety,
-                    efficiency, and local expertise.
-                </p>
-            </div>
-
+        <div class="p-10 sm:p-20 rounded-[30px] bg-gray-200">
+            <h2 class="text-4xl lg:text-6xl urbanist-600 text-gray-900">À propos de nous</h2>
+            <p class="text-gray-800 mt-8 text-base lg:text-2xl montserrat-regular leading-relaxed">
+                IDJMTRANS est un acteur majeur du transport de marchandises et de la logistique au Maroc, dédié au transfert de ce qui compte le plus pour vous. De la gestion complexe de votre chaîne logistique (B2B) aux déménagements résidentiels et transferts de bureaux,
+                nous allions couverture nationale et expertise locale. Notre engagement : garantir la sécurité, l'efficacité et la sérénité à chaque étape de votre projet.
+            </p>
         </div>
 
     </section>
@@ -394,22 +456,23 @@
 
                 <div>
                     <a href="home.html" class="flex items-center montserrat-regular">
-                        <h1 class="text-2xl font-bold text-white">IDJM<span class="font-normal">TRANS</span></h1>
+                        <p class="text-2xl font-bold text-white">IDJM<span class="font-normal">TRANS</span></p>
                     </a>
-                    <p class="mt-2 text-gray-400 urbanist-400">Your Trusted Partner in Logistics and Moving</p>
+                    <p class="mt-2 text-gray-400 urbanist-400 w-82">Votre partenaire de confiance en transport de marchandises et déménagement au Maroc</p>
                 </div>
 
                 <div>
-                    <h4 class="font-semibold mb-2 lora-400 text-sm">Quick Links</h4>
+                    <p class="font-semibold mb-2 lora-400 text-sm">Liens Directs</p>
                     <ul class="text-gray-400 mt-3 urbanist-400">
-                        <li class="mt-1"><a href="logistics.html" class="hover:text-blue-400 text-lg">Commercial Logistic</a></li>
+                        <li class="mt-1"><a href="home.html" class="hover:text-blue-400 text-lg">Accueil</a></li>
+                        <li class="mt-1"><a href="transport-de-marchandises.html" class="hover:text-blue-400 text-lg">Commercial Logistic</a></li>
                         <li class="mt-1"><a href="demenagement.html" class="hover:text-blue-400 text-lg">Demenagement</a></li>
-                        <li class="mt-1"><a href="contact.html" class="hover:text-blue-400 text-lg">Contact</a></li>
+                        <li class="mt-1"><a href="contact.html" class="hover:text-blue-400 text-lg">Contactez-Nous</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-semibold mb-2 lora-400 text-sm">Contact Us</h4>
+                    <p class="font-semibold mb-2 lora-400 text-sm">Contact Nous</p>
                     <p class="mt-4 text-gray-400 urbanist-400 text-lg">info@idjmtrans.com</p>
                     <p class="mt-1 text-gray-400 urbanist-400 text-lg">+212 123 456 789</p>
                     <br>
@@ -423,11 +486,23 @@
 
             </div>
             <div class="text-center mt-8 border-t border-gray-700 pt-4 opacity-75 text-sm">
-                <p>&copy; 2026 IDJMTRANS. All rights reserved.</p>
+                <p>&copy; 2026 IDJMTRANS. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Quick Contact -->
+    <!-- <div x-data="{ open: false }" x-cloak class="fixed bottom-6 right-6 bg-slate-200 shadow-xl rounded-full">
+        <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2" @click.away="open = false" class="flex flex-col items-center space-y-4 mb-2">
+            <a href="tel:212123456789" class="mt-2 mx-auto bg-indigo-500 hover:bg-indigo-700 size-12 text-white flex justify-center items-center rounded-full" target="_blank"><i class="fa-solid fa-phone fa-lg"></i></a>
+            <a href="https://wa.me/212123456789" class="mb-2 mx-auto bg-lime-500 hover:bg-lime-700 size-12 text-white flex justify-center items-center rounded-full" target="_blank"><i class="fa-brands fa-whatsapp fa-lg"></i></a>
+        </div>
+        <button @click="open = !open" :aria-expanded="open.toString()" class="text-white size-14 bg-black flex justify-center items-center rounded-full shadow-xl hover:bg-gray-500 cursor-pointer"><i class="fa-solid fa-comment-dots fa-flip-horizontal fa-lg"></i></button>
+    </div> -->
+    <div class="fixed bottom-6 right-6 rounded-full">
+        <a href="https://wa.me/212123456789" class="bg-lime-500 hover:bg-lime-600 size-16 text-white flex justify-center items-center rounded-full" target="_blank"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
+    </div>
 </body>
 
 </html>
