@@ -104,7 +104,7 @@
             <ul>
                 <li class="py-3 text-lg montserrat-regular"><a href="home.html" class="hover:text-blue-500">Accueil</a></li>
                 <li class="py-3 text-lg montserrat-regular"><a href="transport-de-marchandises.html" class="hover:text-blue-500">Transport de Marchandises</a></li>
-                <li class="py-3 text-lg montserrat-regular"><a href="demenagement.html" class="hover:text-blue-500">Déménagement</a></li>
+                <li class="py-3 text-lg montserrat-regular"><a href="demenagement.html" class="hover:text-blue-500">éménagement</a></li>
                 <li class="py-3 text-lg montserrat-regular"><a href="#about-us" class="hover:text-blue-500">Qui Sommes-Nous</a></li>
                 <li class="py-3 text-lg montserrat-regular"><a href="contact.html" class="hover:text-blue-500">Contactez-Nous</a></li>
             </ul>
@@ -120,7 +120,7 @@
             <div class="flex flex-col sm:flex-row justify-between items-start gap-20">
 
                 <div class="w-full lg:w-1/2 mt-12">
-                    <h1 class="text-4xl md:text-5xl lg:text-5xl text-gray-800 mb-6 montserrat-bold mt-8">Service de Déménagement au Maroc Professionnel pour Particuliers et Bureaux</h1>
+                    <h1 class="text-4xl md:text-5xl lg:text-5xl text-gray-800 mb-6 montserrat-bold mt-8">Déménagement au Maroc - Services Professionnels pour Particuliers et Bureaux</h1>
                     <p class="text-gray-600 montserrat-regular text-lg">IDJMTRANS est votre partenaire de confiance pour tout <strong>déménagement au Maroc</strong>. Que vous soyez à Casablanca, Rabat, ou Marrakech, nous assurons un transfert sécurisé de vos appartements, villas et bureaux. Tarifs clairs,
                         assurance incluse et service rapide pour un déménagement sans stress.</p>
 
@@ -509,21 +509,24 @@
 
                 <div class="bg-white hover:border border-sky-700 transition p-8 rounded-2xl cursor-pointer" @click="active === 1 ? active = null : active = 1">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-lg lg:text-2xl montserrat-regular">What areas do you serve?</h3>
+                        <h3 class="text-lg lg:text-2xl montserrat-regular">Quelles sont vos zones d'intervention ?</h3>
                         <i :class="active === 1 ? 'fa-solid fa-minus' : 'fa-solid fa-plus'" class="text-blue-500 transition-colors duration-200"></i>
                     </div>
-                    <p x-show="active === 1" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-4 text-lg" x-cloak>We serve all major cities across Morocco, including Casablanca, Rabat, Marrakech, and more.</p>
+                    <p x-show="active === 1" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-4 text-lg" x-cloak>
+                        Nous intervenons sur l’ensemble du territoire marocain. De Casablanca à Marrakech, en passant par Rabat et Tanger, nous assurons une couverture logistique complète pour accompagner tous vos besoins, où que vous soyez.
+                    </p>
                 </div>
-
 
                 <div class="bg-white hover:border border-sky-700 transition mt-5 p-8 rounded-2xl cursor-pointer" @click="active === 2 ? active = null : active = 2">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-lg lg:text-2xl montserrat-regular">How do I get a quote?</h3>
+                        <h3 class="text-lg lg:text-2xl montserrat-regular">Comment obtenir un devis personnalisé ?</h3>
                         <i :class="active === 2 ? 'fa-solid fa-minus' : 'fa-solid fa-plus'" class="text-blue-500 transition-colors duration-200"></i>
                     </div>
-                    <p x-show="active === 2" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-4 text-lg" x-cloak>You can request a quote by clicking on the "Get Quote" button or by contacting us directly through our contact page.</p>
+                    <p x-show="active === 2" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-4 text-lg" x-cloak>
+                        Il vous suffit de cliquer sur le bouton « Demander un devis » ou de nous contacter directement via WhatsApp ou notre page dédiée. Nos équipes étudieront vos besoins spécifiques pour vous proposer une solution tarifaire transparente et adaptée à votre
+                        projet.
+                    </p>
                 </div>
-
 
                 <div class="bg-white hover:border border-sky-700 transition mt-5 p-8 rounded-2xl cursor-pointer" @click="active === 3 ? active = null : active = 3">
                     <div class="flex justify-between items-center">
@@ -532,14 +535,6 @@
                     </div>
                     <p x-show="active === 3" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-4 text-lg" x-cloak>Le prix varie selon le volume à transporter et la distance. Chez IDJMTRANS, nous offrons des tarifs compétitifs avec devis gratuit. Demandez un <a href="#moving-form" class="text-blue-500 hover:text-blue-600 underline">devis gratuit</a>                        dès aujourd'hui !.
                     </p>
-                </div>
-
-                <div class="bg-white hover:border border-sky-700 transition mt-5 p-8 rounded-2xl cursor-pointer" @click="active === 4 ? active = null : active = 4">
-                    <div class="flex justify-between items-center">
-                        <h3 class="text-lg lg:text-2xl montserrat-regular">Quels services proposez-vous pour les entreprises ?</h3>
-                        <i :class="active === 4 ? 'fa-solid fa-minus' : 'fa-solid fa-plus'" class="text-blue-500 transition-colors duration-200"></i>
-                    </div>
-                    <p x-show="active === 4" x-transition.opacity.duration.200ms class="mt-2 text-gray-700 py-6 ps-4 text-lg" x-cloak>Nous sommes spécialisés dans le transfert de bureaux et le transport d'équipements informatiques sensibles avec une logistique adaptée.</p>
                 </div>
 
                 <div class="bg-white hover:border border-sky-700 transition mt-5 p-8 rounded-2xl cursor-pointer" @click="active === 5 ? active = null : active = 5">
