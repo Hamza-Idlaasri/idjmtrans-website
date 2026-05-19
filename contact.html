@@ -1,12 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
+    <!-- Metatags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDJMTRANS - Contact</title>
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="IDJMTRANS">
+
+    <title>Contact IDJMTRANS | Devis Transport de Marchandises ou Déménagement au Maroc</title>
+    <meta name="description" content="Besoin d'un devis ou d'informations ? Contactez IDJMTRANS pour vos déménagement ou transport de marchandises au Maroc. Réponse rapide par WhatsApp, téléphone ou email.">
+
+    <link rel="canonical" href="https://www.idjmtrans.ma/contact">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.idjmtrans.ma/contact">
+    <meta property="og:title" content="Contact IDJMTRANS | Devis Transport de Marchandises ou Déménagement au Maroc">
+    <meta property="og:description" content="Obtenez un devis gratuit pour votre déménagement ou transport de marchandises.">
+    <meta property="og:image" content="https://www.idjmtrans.ma/images/logo/IDJMTRANS-logo.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact IDJMTRANS | Devis Transport de Marchandises ou Déménagement au Maroc">
+    <meta name="twitter:description" content="Obtenez un devis gratuit pour votre déménagement ou transport de marchandises.">
+    <meta name="twitter:image" content="https://www.idjmtrans.ma/images/logo/IDJMTRANS-logo.png">
+    <!-- END OF METATAGS -->
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact IDJMTRANS",
+            "description": "Page de contact pour IDJMTRANS, services de déménagement et logistique au Maroc.",
+            "mainEntity": {
+                "@type": "LocalBusiness",
+                "name": "IDJMTRANS",
+                "image": "https://www.idjmtrans.ma/images/logo/IDJMTRANS-logo.png",
+                "telephone": "+212623232323",
+                "email": "info@idjmtrans.ma",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Casablanca",
+                    "addressCountry": "MA"
+                }
+            }
+        }
+    </script>
+
     <!-- Tailwindcss -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Alpinejs -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
@@ -15,35 +59,58 @@
 
 <body>
 
-    <!-- NavBar -->
-    <nav class="w-full bg-white montserrat-regular">
+    <!-- Large NavBar -->
+    <nav class="w-full bg-white montserrat-regular hidden lg:block">
 
         <div class="w-10/12 py-6 mx-auto flex flex-wrap justify-between items-center gap-4">
 
             <!-- Logo -->
             <a href="home.html" class="flex items-center">
-                <h1 class="text-2xl font-bold text-gray-800">IDJM<span class="font-normal">TRANS</span></h1>
+                <img src="images/logo/IDJMTRANS-logo.png" alt="IDJMTRANS Logo" width="150">
+                <!-- <p class="text-2xl font-bold text-gray-800">IDJM<span class="font-normal">TRANS</span></p> -->
             </a>
 
-            <!-- Hamburger — mobile only -->
-            <button class="lg:hidden flex items-center text-gray-700 text-2xl" onclick="document.getElementById('nav-links').classList.toggle('hidden')" aria-label="Toggle menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
             <!-- Links -->
-            <div id="nav-links" class="hidden lg:flex gap-8 xl:gap-12 text-sm items-center w-full lg:w-auto flex-col lg:flex-row">
-                <a href="home.html" class="text-gray-700 hover:text-blue-500">Home</a>
-                <a href="logistics.html" class="text-gray-700 hover:text-blue-500">Commertial Logistic</a>
+            <div class="hidden lg:flex gap-8 xl:gap-12 text-sm items-center w-full lg:w-auto flex-col lg:flex-row">
+                <a href="home.html" class="text-gray-700 hover:text-blue-500">Accueil</a>
+                <a href="transport-de-marchandises.html" class="text-gray-700 hover:text-blue-500">Transport Marchandise</a>
                 <a href="demenagement.html" class="text-gray-700 hover:text-blue-500">Demenagement</a>
-                <a href="contact.html" class="hover:text-white hover:bg-indigo-600 text-indigo-700 bg-indigo-100 rounded-xl px-5 py-2 transition">Contact us</a>
+                <a href="#about-us" class="text-gray-700 hover:text-blue-500">Qui Sommes-Nous</a>
+                <!-- <a href="contact.html" class="text-gray-700 hover:text-blue-500">Contactez-Nous</a> -->
+                <a href="contact.html" class="hover:text-white hover:bg-sky-600 text-sky-700 bg-sky-100 rounded-xl px-5 py-2 transition">Contactez-Nous</a>
             </div>
 
         </div>
 
     </nav>
 
+    <!-- Mobile Nav -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-82 lg:hidden z-99" x-data="{ open: false }" x-cloak>
+
+        <div class="flex justify-between items-center bg-white py-3 px-6 rounded-xl shadow-xl border border-gray-200">
+            <a href="home.html" class="flex items-center montserrat-regular">
+                <p class="text-xl font-bold text-gray-800">IDJM<span class="font-normal">TRANS</span></p>
+            </a>
+
+            <button class="hover:text-blue-500 cursor-pointer" @click="open = !open" aria-label="Toggle mobile menu">
+                <i class="fa-solid fa-grip-lines fa-lg" x-show="!open"></i>
+                <i class="fa-solid fa-xmark fa-lg" x-show="open"></i>
+            </button>
+        </div>
+
+        <div x-show="open" @click.outside="open = false" x-transition x-cloak class="w-full bg-white rounded-xl shadow-xl mt-4 px-8 py-6">
+            <ul>
+                <li class="py-3 text-lg montserrat-regular"><a href="home.html" class="hover:text-blue-500">Accueil</a></li>
+                <li class="py-3 text-lg montserrat-regular"><a href="transport-de-marchandises.html" class="hover:text-blue-500">Transport de Marchandises</a></li>
+                <li class="py-3 text-lg montserrat-regular"><a href="demenagement.html" class="hover:text-blue-500">éménagement</a></li>
+                <li class="py-3 text-lg montserrat-regular"><a href="#about-us" class="hover:text-blue-500">Qui Sommes-Nous</a></li>
+                <li class="py-3 text-lg montserrat-regular"><a href="contact.html" class="hover:text-blue-500">Contactez-Nous</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="w-10/12 mx-auto">
+    <section class="w-11/12 sm:w-10/12 mx-auto lg:mt-0 mt-16">
 
         <!-- Contact Info -->
         <div class="py-16">
@@ -52,10 +119,10 @@
 
                 <div class="mt-6 p-6 sm:w-1/2">
                     <div>
-                        <h1 class="text-5xl lora-400">Contact Us</h1>
+                        <h1 class="text-5xl lora-400">Contactez-Nous</h1>
                         <h2 class="urbanist-400 mt-4 text-lg opacity-75">
                             <!-- Have a question about your logistics or moving needs? Contact us through the form, via email, or chat with us directly on WhatsApp. -->
-                            Reach out via email, phone, or WhatsApp. We're here to answer your questions and get your move started.
+                            N'hésitez pas à nous contacter par email, téléphone ou WhatsApp. Nous sommes là pour répondre à vos questions et lancer votre déménagement dès aujourd'hui.
                         </h2>
                     </div>
 
@@ -66,7 +133,7 @@
                         <!-- Phone -->
                         <div class="mt-6 sm:mt-12 w-fit rounded-[30px]">
                             <p class="mb-3 size-12 flex justify-center items-center bg-gradient-to-tl from-indigo-200 to-indigo-50 rounded-2xl"><i class="fa-solid fa-phone text-indigo-400"></i></p>
-                            <p class="text-sm mb-3 text-gray-600">Call us</p>
+                            <p class="text-sm mb-3 text-gray-600">Appelez-nous</p>
                             <a href="#" class="text-xl urbanist-600">+212 6 23 23 23 23</a>
                         </div>
 
@@ -88,37 +155,28 @@
 
                 </div>
 
+                <!-- Form -->
                 <div class="sm:w-1/2">
                     <div class="w-full sm:w-10/12 shadow-xl border border-gray-300 bg-gradient-to-tl from-slate-300 to-white rounded-3xl mt-6 sm:mt-0 p-6 sm:p-10 mx-auto">
 
-                        <h3 class="text-3xl text-gray-700 urbanist-600">Get in Touch</h3>
-                        <p class="text-gray-500 mt-1">You can reach us anytime</p>
+                        <h3 class="text-xl urbanist-400 text-gray-800">Nous sommes à votre écoute à tout moment</h3>
 
                         <form name="contactIDJM" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-                            <p class="hidden">
-                                <label>
-                                  Don’t fill this out if you’re human: <input name="bot-field" type="text" />
-                                </label>
-                              </p>
-                            
+                            <input type="hidden" name="bot-field">
+
                             <div class="mt-4">
-                                <input type="text" name="full-name" class="border border-gray-300 rounded-lg py-2 px-4 bg-white w-full mt-2" placeholder="Full Name">
+                                <input type="text" name="full-name" class="border border-gray-300 rounded-lg py-2 px-4 bg-white w-full mt-2" placeholder="Nom complet" required>
                             </div>
 
                             <div class="mt-4">
-                                <input type="email" name="email" class="border border-gray-300 rounded-lg py-2 px-4 bg-white w-full mt-2" placeholder="Email">
+                                <input type="email" name="email" class="border border-gray-300 rounded-lg py-2 px-4 bg-white w-full mt-2" placeholder="Email" required>
                             </div>
-
-                            <!-- <div class="mt-4">
-                                <input type="text" name="phone-number" class="border border-gray-300 rounded-lg py-2 px-4 bg-white w-full mt-2" placeholder="Phone Number">
-                            </div> -->
 
                             <div class="mt-4">
-                                <textarea name="message" id="" rows="5" class="border border-gray-300 rounded-lg py-2 px-4 bg-white w-full mt-2" placeholder="How can we help?"></textarea>
+                                <textarea name="message" rows="5" class="border border-gray-300 rounded-lg py-2 px-4 bg-white w-full mt-2" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
                             </div>
 
-                            <button type="submit" class="w-full bg-sky-900 hover:bg-sky-800 text-white mt-10 py-3 rounded-xl urbanist-600">Send</button>
-
+                            <button type="submit" class="w-full bg-sky-900 hover:bg-sky-800 text-white mt-10 py-3 rounded-xl urbanist-600 cursor-pointer">Envoyer</button>
                         </form>
                     </div>
                 </div>
@@ -129,29 +187,43 @@
 
     </section>
 
+    <!-- About us -->
+    <section class="w-11/12 sm:w-10/12 mx-auto my-24" id="about-us">
+
+        <div class="p-10 sm:p-20 rounded-[30px] bg-gray-200">
+            <h2 class="text-4xl lg:text-6xl urbanist-600 text-gray-900">À propos de nous</h2>
+            <p class="text-gray-800 mt-8 text-base lg:text-2xl montserrat-regular leading-relaxed">
+                IDJMTRANS est un acteur majeur du transport de marchandises et de la logistique au Maroc, dédié au transfert de ce qui compte le plus pour vous. De la gestion complexe de votre chaîne logistique (B2B) aux déménagements résidentiels et transferts de bureaux,
+                nous allions couverture nationale et expertise locale. Notre engagement : garantir la sécurité, l'efficacité et la sérénité à chaque étape de votre projet.
+            </p>
+        </div>
+
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-14 pb-8 mt-24">
         <div class="w-10/12 mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-start gap-10 py-6">
 
-                <div>
+                <div class="">
                     <a href="home.html" class="flex items-center montserrat-regular">
-                        <h1 class="text-2xl font-bold text-white">IDJM<span class="font-normal">TRANS</span></h1>
+                        <p class="text-2xl font-bold text-white">IDJM<span class="font-normal">TRANS</span></p>
                     </a>
-                    <p class="mt-2 text-gray-400 urbanist-400">Your Trusted Partner in Logistics and Moving</p>
+                    <p class="mt-2 text-gray-400 urbanist-400 w-82">Votre partenaire de confiance en transport de marchandises et déménagement au Maroc</p>
                 </div>
 
                 <div>
-                    <h4 class="font-semibold mb-2 lora-400 text-sm">Quick Links</h4>
+                    <p class="font-semibold mb-2 lora-400 text-sm">Liens Directs</p>
                     <ul class="text-gray-400 mt-3 urbanist-400">
-                        <li class="mt-1"><a href="logistics.html" class="hover:text-blue-400 text-lg">Commercial Logistic</a></li>
-                        <li class="mt-1"><a href="demenagement.html" class="hover:text-blue-400 text-lg">Demenagement</a></li>
-                        <li class="mt-1"><a href="contact.html" class="hover:text-blue-400 text-lg">Contact</a></li>
+                        <li class="mt-1"><a href="home.html" class="hover:text-blue-400 text-lg">Accueil</a></li>
+                        <li class="mt-1"><a href="transport-de-marchandises.html" class="hover:text-blue-400 text-lg">Transport de Marchandises</a></li>
+                        <li class="mt-1"><a href="demenagement.html" class="hover:text-blue-400 text-lg">Déménagement</a></li>
+                        <li class="mt-1"><a href="contact.html" class="hover:text-blue-400 text-lg">Contactez-Nous</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-semibold mb-2 lora-400 text-sm">Contact Us</h4>
+                    <p class="font-semibold mb-2 lora-400 text-sm">Contact Nous</p>
                     <p class="mt-4 text-gray-400 urbanist-400 text-lg">info@idjmtrans.com</p>
                     <p class="mt-1 text-gray-400 urbanist-400 text-lg">+212 123 456 789</p>
                     <br>
@@ -165,7 +237,7 @@
 
             </div>
             <div class="text-center mt-8 border-t border-gray-700 pt-4 opacity-75 text-sm">
-                <p>&copy; 2026 IDJMTRANS. All rights reserved.</p>
+                <p>&copy; 2026 IDJMTRANS. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
