@@ -34,9 +34,40 @@
     font-style: normal;
 }
 
+.urbanist-800 {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
 .lora-400 {
     font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    /* Ensures the container is as wide as all logos combined */
+    animation: scroll 30s linear infinite;
+}
+
+.pause-on-hover:hover .animate-marquee {
+    animation-play-state: paused;
+}
+
+[x-cloak] {
+    display: none !important;
 }
