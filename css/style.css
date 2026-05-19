@@ -61,7 +61,7 @@
     display: flex;
     width: max-content;
     /* Ensures the container is as wide as all logos combined */
-    animation: scroll 30s linear infinite;
+    animation: scroll 25s linear infinite;
 }
 
 .pause-on-hover:hover .animate-marquee {
