@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://www.idjmtrans.com/sitemap.xml
+Sitemap: https://www.idjmtrans.ma/sitemap.xml
