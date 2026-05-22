@@ -8,14 +8,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Home Page -->
-  <url>
-    <loc>https://www.idjmtrans.ma/home.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
   <!-- Commercial Logistics Page -->
   <url>
     <loc>https://www.idjmtrans.ma/transport-de-marchandises.html</loc>
