@@ -145,34 +145,35 @@
                         <div class="space-y-4">
                             <div>
                                 <label for="address-from" class="urbanist-600 block text-sm mb-1">Adresse de départ</label>
-                                <input type="text" id="address-from" class="border border-stone-400 rounded-lg py-3 px-4 bg-white w-full focus:ring-2 focus:ring-amber-300 outline-none" placeholder="Ville ou adresse de départ...">
+                                <input type="text" name="address-from" class="border border-stone-400 rounded-lg py-3 px-4 bg-white w-full focus:ring-2 focus:ring-amber-300 outline-none" placeholder="Ville ou adresse de départ...">
                             </div>
 
                             <div>
                                 <label for="address-to" class="urbanist-600 block text-sm mb-1">Adresse d'arrivée</label>
-                                <input type="text" id="address-to" class="border border-stone-400 rounded-lg py-3 px-4 bg-white w-full focus:ring-2 focus:ring-amber-300 outline-none" placeholder="Ville ou adresse d'arrivée...">
+                                <input type="text" name="address-to" class="border border-stone-400 rounded-lg py-3 px-4 bg-white w-full focus:ring-2 focus:ring-amber-300 outline-none" placeholder="Ville ou adresse d'arrivée...">
                             </div>
                         </div>
 
                         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label for="move-type" class="urbanist-600 block text-sm mb-1">Type de déménagement</label>
-                                <select id="move-type" class="border border-stone-400 rounded-lg py-3 px-4 w-full bg-white">
+                                <select name="move-type" class="border border-stone-400 rounded-lg py-3 px-4 w-full bg-white">
                                     <option value="">Sélectionnez le type</option>
-                                    <option value="Apartment">Appartement</option>
-                                    <option value="House / Villa">Maison / Villa</option>
-                                    <option value="Office">Bureau</option>
+                                    <option value="Appartement">Appartement</option>
+                                    <option value="Maison">Maison</option>
+                                    <option value="Villa">Villa</option>
+                                    <option value="Bureau">Bureau</option>
                                 </select>
                             </div>
                             <div>
                                 <label for="move-date" class="urbanist-600 block text-sm mb-1">Date du déménagement</label>
-                                <input type="date" id="move-date" class="border border-stone-400 rounded-lg py-3 px-4 bg-white w-full">
+                                <input type="date" name="move-date" class="border border-stone-400 rounded-lg py-3 px-4 bg-white w-full">
                             </div>
                         </div>
 
                         <div class="mt-6">
                             <label for="pack-type" class="urbanist-600 block text-sm mb-1">Type de Pack</label>
-                            <select id="pack-type" class="border border-stone-400 rounded-lg py-3 px-4 w-full bg-white">
+                            <select name="pack-type" class="border border-stone-400 rounded-lg py-3 px-4 w-full bg-white">
                                 <option value="">Sélectionnez un Pack</option>
                                 <option value="Basic">Pack Basic</option>
                                 <option value="ECO">Pack ECO</option>
@@ -191,11 +192,11 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label for="phone" class="urbanist-600 block text-sm mb-1">Numéro de téléphone</label>
-                                <input type="tel" id="phone" class="border border-stone-400 rounded-lg py-3 px-4 bg-white w-full" placeholder="+212 6xx xxx xxx">
+                                <input type="tel" name="phone" class="border border-stone-400 rounded-lg py-3 px-4 bg-white w-full" placeholder="+212 6xx xxx xxx">
                             </div>
                             <div>
                                 <label for="full_name" class="urbanist-600 block text-sm mb-1">Nom complet</label>
-                                <input type="text" id="full_name" class="border border-stone-400 rounded-lg py-3 px-4 bg-white w-full" placeholder="Votre nom et prénom">
+                                <input type="text" name="full_name" class="border border-stone-400 rounded-lg py-3 px-4 bg-white w-full" placeholder="Votre nom et prénom">
                             </div>
                         </div>
 
